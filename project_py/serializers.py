@@ -1,6 +1,6 @@
 from .models import User, Book
 from rest_framework import serializers
-from django.db import models
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,6 +14,16 @@ class BookSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class BookSerializeruser1(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+
+class BookSerializeruser2(serializers.ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
 # class Book_UserSerializer(serializers.ModelSerializer):
 #     user = serializers.SerializerMethodField()
 #

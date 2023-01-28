@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>bghhdhdh</h2>
+{{ name }}
+<br>
+User list:
+<br>
+<ul>
+  {% for user in users %}
+    <li>Nume: {{ user.name }}</li>
+    <li>Username:{{ user.username }}</li>
+    <li>Email: {{ user.email }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
